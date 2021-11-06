@@ -1,0 +1,23 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "Social Network API. NoSQL Challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomioh/social-network.git"
+  },
+  "keywords": [
+    "NoSQL"
+  ],
+  "author": "Noyemi Ohanyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomioh/social-network/issues"
+  },
+  "homepage": "https://github.com/nomioh/social-network#readme"
+}
