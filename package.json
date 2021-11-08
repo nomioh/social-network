@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/nomioh/social-network/issues"
   },
-  "homepage": "https://github.com/nomioh/social-network#readme"
+  "homepage": "https://github.com/nomioh/social-network#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.12"
+  }
 }
