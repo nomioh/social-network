@@ -67,9 +67,13 @@ const thoughtController = {
   },
 
   // delete user
-  deleteUser({ params }, res) {
-    User.findOneAndDelete({ _id: params.id })
+  deleteThought({ params }, res) {
+    Thought.findOneAndDelete({ _id: params.id })
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.json(err));
   },
+  // reaction
+  //delete reation
 };
+
+module.exports = thoughtController;
