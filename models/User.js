@@ -12,10 +12,7 @@ const UserSchema = new Schema(
       type: String,
       unique: true,
       required: true,
-      validate: {
-        validator: () => Promise.resolve(false),
-        message: "Email validation failed",
-      },
+      match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/],
     },
     thoughts: [
       {
@@ -23,7 +20,7 @@ const UserSchema = new Schema(
         ref: "Thought",
       },
     ],
-    thoughts: [
+    friends: [
       {
         type: Schema.Types.ObjectId,
         ref: "User",
