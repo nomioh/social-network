@@ -71,7 +71,7 @@ const thoughtController = {
     Thought.findOneAndDelete({ _id: params.id })
       .then((dbThoughtsData) => {
         if (!dbThoughtsData) {
-          res.status(404).json({ message: "No thought found by this id" });
+          res.status(404).json({ message: "Reaction complete" });
           return;
         }
         res.json(dbThoughtsData);
@@ -80,6 +80,7 @@ const thoughtController = {
   },
   // add a reaction, api/thoughts/:thoughtsId/reaction
   addReaction({ params, body }, res) {
+    console.log(body);
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
       { $push: { reaction: body } },

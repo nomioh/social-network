@@ -8,6 +8,7 @@ const UserSchema = new Schema(
       required: true,
       trim: true,
     },
+    // use regex to match email address
     email: {
       type: String,
       unique: true,
@@ -38,7 +39,7 @@ const UserSchema = new Schema(
 
 // Virtual: retrieves the length of the user's friends array field on query.
 UserSchema.virtual("friendCount").get(function () {
-  return this.friends.reduce((total, friend) => total + friend.length + 1, 0);
+  return this.friends.length;
 });
 
 const User = model("User", UserSchema);
